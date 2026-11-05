@@ -13,7 +13,7 @@ flowchart TD
     UNMAPPED["Not yet mapped<br/>adb/, apkSignature/, apktool/, cutter/, desktop/, electron/, erlang/<br/>flutter/, frida/, gdb/, jeb/, kuna/, objdump/, pcap/<br/>rizin/<br/>named by neither the sets in this script, scripts/lib/module-boundaries.mjs nor the provider catalog"]
     CORE["Pure core: domain semantics and contracts<br/>contracts/, domain/<br/>imported by every layer, imports nothing above"]
     ADAPTERS -->|"58 imports"| COMPOSITION
-    ADAPTERS -->|"411 imports"| APPLICATION
+    ADAPTERS -->|"412 imports"| APPLICATION
     ADAPTERS -->|"34 imports"| PROVIDERS
     ADAPTERS -->|"42 imports"| FOUNDATION
     ADAPTERS -->|"51 imports"| CONFIG
@@ -24,8 +24,8 @@ flowchart TD
     APPLICATION -->|"129 imports"| FOUNDATION
     APPLICATION -->|"42 imports"| CONFIG
     APPLICATION -->|"15 imports"| UNMAPPED
-    PROVIDERS -.->|"156 imports, upward: a port or type defined above"| APPLICATION
-    PROVIDERS -->|"412 imports"| FOUNDATION
+    PROVIDERS -.->|"157 imports, upward: a port or type defined above"| APPLICATION
+    PROVIDERS -->|"413 imports"| FOUNDATION
     PROVIDERS -->|"58 imports"| CONFIG
     FOUNDATION -.->|"18 imports, upward: a port or type defined above"| PROVIDERS
     UNMAPPED -.->|"32 imports, upward: a port or type defined above"| APPLICATION
